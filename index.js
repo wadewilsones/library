@@ -8,7 +8,10 @@ addBookBtn.addEventListener('click', addBook);
 
 window.onload = () => {
     setStorage();
-    displayBooks();
+    if(favoriteBooks != null){
+        displayBooks();
+    }
+
 }
 
 //Prototype of a book
@@ -97,7 +100,7 @@ function setStorage(){
 
 function displayBooks(){
 
-    if(favoriteBooks.length > 0){
+    if(favoriteBooks != null){
 
         favoriteBooks.forEach(element => {
             let book = document.createElement('div');
