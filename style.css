@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-appearance:none;
+}
+
+
+
+
+h1{
+    text-align: center;
+    margin: 2em 0 0.5em;
+    font-weight: 300;
+}
+
+h2{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+button{
+    display: block;
+    background-color: rgb(54, 153, 234);
+    color: white;
+    margin: 2em auto;
+    padding: 1em 2em;
+    font-size:1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(39, 112, 172);
+}
+
+/*FORM*/
+
+
+@media screen and (min-width:1000px){
+
+
+    /*IF NO BOOK SELECTED*/
+    form {
+       
+        width:500px;
+        margin: 1em auto;
+        padding: 2em;
+    }
+
+    form label{
+        display: block;
+        text-align: left;
+        margin: 1em 7em 0.5em;
+        font-weight: 300;
+
+    }
+    
+    form input[type='text']{
+        -webkit-appearance:none ;
+        display: block;
+        width:300px;
+        padding: 1em 0 20px 1em;
+        margin: 1em auto;
+        border-radius: 10px;
+        box-shadow: rgba(99, 92, 92, 0.451) 1px 1px 5px;
+    }
+
+
+    #submit{
+        display: block;
+        background-color: rgb(54, 153, 234);
+        color: white;
+        margin: 2em auto;
+        padding: 1em 2em;
+        font-size:1.2em;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #books{
+
+        display:grid;
+        width:1000px;
+        grid-gap:10px;
+        margin:auto;
+        grid-template-columns: repeat(3,30%);
+    }
+
+    #books div{
+        text-align: center;
+        border:2px solid red;
+    }
+
+    #removeBook{
+        display: block;
+        background-color: rgb(234, 114, 54);
+        color: white;
+        margin: 2em auto;
+        padding: 0.5em 1em;
+        font-size:1.2em;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+}
+
