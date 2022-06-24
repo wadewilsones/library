@@ -58,7 +58,7 @@ button:hover{
 
     }
     
-    form input[type='text']{
+    .Bookinput{
         -webkit-appearance:none ;
         display: block;
         width:300px;
@@ -80,30 +80,64 @@ button:hover{
         cursor: pointer;
     }
 
+    #submit:hover{
+        background-color: rgb(15, 130, 224);
+    }
+
     #books{
 
         display:grid;
         width:1000px;
         grid-gap:10px;
         margin:auto;
-        grid-template-columns: repeat(3,30%);
+        grid-template-columns: repeat(3,32.7%);
+
     }
 
     #books div{
         text-align: center;
-        border:2px solid red;
+        box-shadow: rgba(108, 99, 99, 0.229) 2px 5px 10px;
+        padding: 2em 1em 0;
+        border-radius: 10px;
     }
 
-    #removeBook{
+    #books div h3{
+        font-weight: 400;
+        font-size: 1.5em;
+        color: rgb(47, 47, 44);
+    }
+
+    #books div h4{
+        font-weight: 300;
+    }
+
+
+    .removeBtn{
         display: block;
-        background-color: rgb(234, 114, 54);
+        background-color: rgb(234, 120, 54);
         color: white;
         margin: 2em auto;
-        padding: 0.5em 1em;
+        padding: 0.5em 1.4em;
         font-size:1.2em;
         border-radius: 10px;
         cursor: pointer;
     }
 
+    .removeBtn:hover{
+        background-color: rgb(243, 101, 19);
+    }
+
+
+
+    /*BAD INPUT*/
+    .Wrong-input{
+        -webkit-appearance:none ;
+        display: block;
+        width:300px;
+        padding: 1em 0 20px 1em;
+        margin: 1em auto;
+        border-radius: 10px;
+        border: 2px solid rgba(216, 103, 103, 0.553)
+    }
 }
 
