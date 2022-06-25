@@ -4,15 +4,14 @@ const bookContainer = document.querySelector('section');
 
 let favoriteBooks = [];
 
+
 addBookBtn.addEventListener('click', addBook);
 
 window.onload = () => {
-    setStorage();
-    if(favoriteBooks != null){
+
+        setStorage();
         displayBooks();
     }
-
-}
 
 //Prototype of a book
 
@@ -87,12 +86,13 @@ function addBook(event){
 
 //Add to local Storage
 function setStorage(){
-  
-    let dataFromStorage = window.localStorage.getItem('BookList');
-    if(dataFromStorage != []){
-        favoriteBooks = JSON.parse(dataFromStorage);
+    if(window.localStorage.getItem('BookList') != null){
+        let storageData = window.localStorage.getItem('BookList')
+        favoriteBooks = JSON.parse(storageData);
     }
-
+    else{
+        localStorage.setItem('BookList', JSON.stringify(favoriteBooks));
+    }
 
 }
 
@@ -100,7 +100,7 @@ function setStorage(){
 
 function displayBooks(){
 
-    if(favoriteBooks != null){
+    if(favoriteBooks.length > 0){
 
         favoriteBooks.forEach(element => {
             let book = document.createElement('div');
@@ -112,7 +112,7 @@ function displayBooks(){
                 book.innerHTML += `<button class = 'readStatusBtn' id = "r-${element.bookName}"onClick = "markRead(event)">Mark as Read</button>`;
             }
             else{
-                book.innerHTML += `<button class = 'readStatusBtn' id = "r-${element.bookName}"onClick = "markRead(event)">Mark as Unread</button>`;
+                book.innerHTML += `<button class = 'unreadStatusBtn' id = "r-${element.bookName}"onClick = "markRead(event)">Mark as Unread</button>`;
             }
            
             bookContainer.append(book);
